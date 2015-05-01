@@ -3,6 +3,9 @@ require('definition')
 
 
 describe(Definition) do
+  before() do
+    Definition.clear()
+  end
 
   describe('#initialize', 'attr_reader') do
     it("returns the details of a new definition") do
@@ -22,6 +25,14 @@ describe(Definition) do
 
   describe('.all') do
     it('is empty at first') do
+      expect(Definition.all()).to(eq([]))
+    end
+  end
+
+  describe('.clear') do
+    it("empties out all of the saved definitions") do
+      Definition.new("high up", "tall").save()
+      Definition.clear()
       expect(Definition.all()).to(eq([]))
     end
   end
