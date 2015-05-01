@@ -21,11 +21,13 @@ describe(Word) do
       expect(Word.all()).to(eq([test_word]))
     end
   end
+
   describe('.all') do
     it('is empty at first') do
       expect(Word.all()).to(eq([]))
     end
   end
+
   describe('.clear') do
     it('empties out all of the saved definitions') do
       Word.new('cloud').save()
@@ -33,5 +35,21 @@ describe(Word) do
       expect(Word.all()).to(eq([]))
     end
   end
+  describe('#id') do
+    it('returns the id of the word') do
+      test_word = Word.new("far")
+      test_word.save()
+      expect(test_word.id()).to(eq(1))
+    end
+  end
 
+  describe('.find') do
+    it('returns a definition by its id') do
+      test_word = Word.new("bus")
+      test_word.save()
+      test_word2 = Word.new("brown")
+      test_word2.save()
+      expect(Word.find(test_word.id())).to(eq(test_word))
+    end
+  end
 end

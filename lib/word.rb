@@ -20,4 +20,19 @@ class Word
   define_singleton_method(:clear) do
     @@words = []
   end
+
+  define_method(:id) do
+    @id
+  end
+
+  define_singleton_method(:find) do |identification|
+    found_word = nil
+    @@words.each() do |entry|
+      if entry.id().eql?(identification.to_i())
+        found_word = entry
+      end
+    end
+    found_word
+  end
+
 end
