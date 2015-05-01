@@ -2,11 +2,12 @@ class Word
 
   @@words = []
 
-  attr_reader(:name)
+  attr_reader(:name, :word_defs)
 
   define_method(:initialize) do |name|
     @name = name
     @id = @@words.length().+(1)
+    @word_defs = []
   end
 
   define_method(:save) do
@@ -35,4 +36,7 @@ class Word
     found_word
   end
 
+  define_method(:add_definition) do |new_definitions|
+    @word_defs.push(new_definitions)
+  end
 end
