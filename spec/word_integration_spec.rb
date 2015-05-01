@@ -9,3 +9,12 @@ describe('path for index page', {:type => :feature}) do
     expect(page).to have_content('Welcome to the Dictionary')
   end
 end
+
+describe('path for words/new', {:type => :feature}) do
+    it('allows user to input a new word') do
+      visit('/words/new')
+      fill_in('name', :with => 'yard')
+      click_button('Add Word')
+      expect(page).to have_content('Your item has been')
+    end
+  end
