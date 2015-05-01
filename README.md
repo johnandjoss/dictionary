@@ -1,9 +1,12 @@
 Author: Jocelyn Alsdorf
+
 Program name: Dictionary
+
 Description: This app allows a user to input a word and add definitions to it.
 The app will save the word and allow user to see the list of all words. The user can click on a word to see all of its definitions and can add more definitions to the word.
 Set-up Instructions:
 Ruby
+
 The gems used:
 gem('sinatra')
 gem('sinatra-contrib')
@@ -14,6 +17,7 @@ gem('pry')
 To play, enter a list of words.Click on a specific word to ad definitions to it.
 
 Heroku link:
+https://intense-shelf-8622.herokuapp.com/
 
 Copying/license:
 The MIT License (MIT)
