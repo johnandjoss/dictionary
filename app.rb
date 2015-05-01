@@ -28,8 +28,8 @@ get('/words/:id') do
 end
 
 get('/words/:id/definitions/new') do
-    @word = Word.find(params.fetch('id').to_i())
-    erb(:word_definitions_form)
+  @word = Word.find(params.fetch('id').to_i())
+  erb(:word_definitions_form)
 end
 
 post('/definitions') do

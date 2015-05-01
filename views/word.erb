@@ -2,9 +2,10 @@
 
 <ul>
   <% @word.word_defs().each() do |definition| %>
-    <li><a href="/definitions/<%= definition.id() %>"><%= definition.def_one() %> <%= definition.def_two() %></a></li>
+    <li><%= definition.def_one() %> </li>
+    <li><%= definition.def_two() %></li>
   <% end %>
 </ul>
 
-<a href="/words/<%= @word.id%>/definitions/new">Add a new definition</a>
+<a href="/words/<%= @word.id%>/definitions/new">Add a new definition</a><br>
 <a href="/">Return to Main Page</a>

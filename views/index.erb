@@ -4,10 +4,10 @@
 <p>Here are all of your words:</p>
 
 <% @words.each() do |word| %>
-    <li><a href="/words/<%= word.id() %>"><%= word.name() %></a></li>
+  <li><a href="/words/<%= word.id() %>"><%= word.name() %></a></li>
   <% end %>
 <br>
 <br>
 <ul>
-<li><a href="/words/new">Add New Word</a></li>
+  <li><a href="/words/new">Add New Word</a></li>
 </ul>
